@@ -20,12 +20,20 @@ btn.addEventListener('click', function(e) {
    const btnRemove = document.createElement('button');
 
    li.innerText = input.value;
+   li.classList.add('marg');
    input.value = '';
    btnRemove.innerText = ' Remove';
+   btnRemove.classList.add('marg');
    
-
    li.append(btnRemove);
    ol.append(li);
+
+   li.addEventListener('click', function(e) {
+       if(e.target.tagName === 'LI') {
+           li.classList.toggle('done');
+       }
+       
+   });
 
    document.body.append(ol);
 });
