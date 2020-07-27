@@ -17,10 +17,15 @@ console.log(btn);
 btn.addEventListener('click', function(e) {
     e.preventDefault();
    const li = document.createElement('li');
+   const btnRemove = document.createElement('button');
+
    li.innerText = input.value;
    input.value = '';
+   btnRemove.innerText = ' Remove';
+   
+
+   li.append(btnRemove);
    ol.append(li);
 
    document.body.append(ol);
-    
 });
