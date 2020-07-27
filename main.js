@@ -8,3 +8,15 @@
 // Mark a todo as completed (cross out the text of the todo)
 // Remove a todo
 
+const input = document.querySelector('#text');
+const btn = document.querySelector('#btn');
+const ol = document.createElement('ol');
+console.log(input);
+console.log(btn);
+
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+   const li = document.createElement('li');
+   li.innerText = input.value;
+   console.log(li);
+});
