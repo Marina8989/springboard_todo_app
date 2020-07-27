@@ -32,7 +32,12 @@ btn.addEventListener('click', function(e) {
        if(e.target.tagName === 'LI') {
            li.classList.toggle('done');
        }
-       
+   });
+ 
+   btnRemove.addEventListener('click', function(e) {
+     if(e.target.tagName === 'BUTTON') {
+       btnRemove.parentElement.remove();
+     }
    });
 
    document.body.append(ol);
