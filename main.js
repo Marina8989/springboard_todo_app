@@ -18,5 +18,9 @@ btn.addEventListener('click', function(e) {
     e.preventDefault();
    const li = document.createElement('li');
    li.innerText = input.value;
-   console.log(li);
+   input.value = '';
+   ol.append(li);
+
+   document.body.append(ol);
+    
 });
