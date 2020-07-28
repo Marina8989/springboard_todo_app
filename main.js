@@ -1,13 +1,3 @@
-// Part 1
-
-// For this assignment you will be combining your knowledge of DOM access and events to build a todo app!
-
-// As a user, you should be able to:
-
-// Add a new todo(by submitting a form)
-// Mark a todo as completed (cross out the text of the todo)
-// Remove a todo
-
 const input = document.querySelector('#text');
 const btn = document.querySelector('#btn');
 const ol = document.createElement('ol');
@@ -33,12 +23,16 @@ btn.addEventListener('click', function(e) {
        }
    });
  
+  
    btnRemove.addEventListener('click', function(e) {
      if(e.target.tagName === 'BUTTON') {
        btnRemove.parentElement.remove();
      }
    });
 
-   document.body.append(ol);
+    document.body.append(ol);
 });
+
+
+
 
