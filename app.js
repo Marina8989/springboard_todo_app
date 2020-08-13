@@ -4,8 +4,8 @@ const todoList = document.querySelector('#todoList');
 
 btn.addEventListener('click', function(e) {
     e.preventDefault();
-    const li = document.createElement('li');
-    const removeBtn = document.createElement('button');
+    const li = document.createElement("li");
+    const removeBtn = document.createElement("button");
 
     li.innerText = input.value;
     removeBtn.innerText = 'Remove';
@@ -13,4 +13,14 @@ btn.addEventListener('click', function(e) {
 
     li.appendChild(removeBtn);
     todoList.appendChild(li);
+
+    li.addEventListener('click', function(e) {
+       e.target.style.textDecoration = 'line-through';
+    });
+
+    removeBtn.addEventListener('click', function(e) {
+         e.target.parentElement.remove();
+    })
+
+
 })
