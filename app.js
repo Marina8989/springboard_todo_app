@@ -7,20 +7,21 @@ btn.addEventListener('click', function(e) {
     const li = document.createElement("li");
     const removeBtn = document.createElement("button");
 
-    li.innerText = input.value;
-    removeBtn.innerText = 'Remove';
-    input.value = '';
+    if(input.value === '') {
+      alert('Please add a todo first');
+    }else {
+       li.innerText = input.value;
+       removeBtn.innerText = "Remove";
+       input.value = "";
 
-    li.appendChild(removeBtn);
-    todoList.appendChild(li);
+       li.appendChild(removeBtn);
+       todoList.appendChild(li);
 
-    li.addEventListener('click', function(e) {
-       e.target.style.textDecoration = 'line-through';
-    });
-
+       li.addEventListener("click", function (e) {
+         e.target.style.textDecoration = "line-through";
+       });
+    }
     removeBtn.addEventListener('click', function(e) {
          e.target.parentElement.remove();
     })
-
-
 })
